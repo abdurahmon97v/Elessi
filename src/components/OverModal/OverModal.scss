@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+.overmodal {
+  width: 30%;
+  background-color: #fff;
+  height: 100vh;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+}
+.header-botm-icon {
+  &:hover {
+    color: $borderG;
+  }
+}
+.left {
+  left: 0;
+}
+.rigiht {
+  right: 0;
+}

@@ -1,0 +1,44 @@
+@mixin flexB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin flexC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin bigTitle {
+  color: #333;
+  font-size: 30.5px;
+  font-weight: 800;
+  line-height: 1.428;
+}
+@mixin middleTitle {
+  line-height: 1.428;
+  color: #333;
+  font-weight: 700;
+  font-size: 17.4px;
+}
+
+@mixin regular {
+  font-size: 15.95px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  transition: all .4s ease;
+}
+@mixin hoverText {
+  &:hover{
+    color: #6bad0d;
+  }
+}
+@mixin respon($screen-md-min) {
+  @media (max-width: #{$screen-md-min}) {
+      @content;
+  }
+}
