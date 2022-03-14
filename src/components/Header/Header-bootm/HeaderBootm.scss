@@ -1,3 +1,4 @@
+@import '../../../mixins.scss';
 .HeaderBootm {
   min-height: 126px;
   display: grid;
@@ -19,6 +20,9 @@
     color: #555;
     font-size: 28px;
   }
+}
+.header-botm-menu{
+  display: none;
 }
 .header-botm-form{
   display: flex;
@@ -48,5 +52,50 @@
     font-size: 13.05px;
     min-width: 130px;
     background-color: #6bad0d;
+  }
+}
+.header-top-search-icon{
+  display: none;
+}
+
+@include respon(768px){
+  .header-top-user-icon{
+    display: none;
+  }
+  .header-top-heart-icon{
+    display: none;
+  }
+  .header-top-search-icon{
+    display: block;
+  }
+  .header-botm-icon{
+    font-size: 28px;
+  }
+}
+@include respon(1024px){
+  
+  .HeaderBootm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 62px;
+  }
+  
+  .header-botm-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .header-botm-form{
+    display: none;
+  }
+  .header-botm-menu{
+    background-color: transparent;
+    display: block;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
   }
 }

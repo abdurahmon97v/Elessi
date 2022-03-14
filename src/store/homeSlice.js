@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   overmodal: false,
+ 
 }
 
 const homeSlice = createSlice({
@@ -9,9 +10,9 @@ const homeSlice = createSlice({
   initialState,
   reducers: {
     chengeModal: (state, action) => {
-      console.log(action.payload);
       state.overmodal = action.payload
-    }
+    },
+    
   }
 
 });

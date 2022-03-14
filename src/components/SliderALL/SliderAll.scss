@@ -1,0 +1,13 @@
+.btn-slick{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.btn-right{
+  right: 0;
+}
+.btn-left{
+  left: 0;
+  z-index: 3;
+}

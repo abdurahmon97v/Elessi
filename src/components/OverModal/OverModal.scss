@@ -1,10 +1,10 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
 .overmodal {
-  width: 30%;
+  width: 100%;
   background-color: #fff;
   height: 100vh;
-  z-index: 9;
+  z-index: 50;
   position: absolute;
   top: 0;
 }
@@ -16,6 +16,13 @@
 .left {
   left: 0;
 }
-.rigiht {
+.right {
   right: 0;
+}
+.overmodal-in{
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 30%;
+  height: 100vh;
 }

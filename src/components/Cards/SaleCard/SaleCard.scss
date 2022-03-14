@@ -1,0 +1,32 @@
+.sale-card-miniblock {
+  padding: 10px;
+  border: 1px solid #a7a7a7;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  cursor: grab;
+  gap: 20px;
+}
+.sale-card-miniblock-img {
+  max-width: 71px;
+}
+.sale-card-miniblock-title {
+  line-height: 1.2;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16.675px;
+  display: block;
+  color: #333;
+}
+.sale-card-miniblock-price {
+  color: #aaa;
+  text-decoration: line-through;
+}
+.sale-card-miniblock-sale {
+  color: red;
+}
+.sale-card-miniblock-prises {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

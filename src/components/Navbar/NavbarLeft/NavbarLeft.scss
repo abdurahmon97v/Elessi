@@ -1,0 +1,241 @@
+@import '../../../mixins.scss';
+.navbar-left-block {
+  width: 280px;
+  position: relative;
+}
+.navbar-left-btn {
+  background-color: #6bad0d;
+  color: #ffffff;
+  height: 55px;
+  border: none;
+  width: 85%;
+  font-weight: 900;
+  padding: 0;
+  font-size: 15.225px;
+  border-radius: 6px 6px 0 0;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.navbar-left {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar-left-icon {
+  vertical-align: middle;
+  font-size: 20px;
+}
+.navbar-left-list {
+  display: flex;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nabar-left-item {
+  padding: 16px 17px;
+  cursor: pointer;
+  height: 100%;
+  color: #333333;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 1.4px;
+  transition: all 0.4s ease;
+  &:hover {
+    color: #6bad0d;
+  }
+}
+.item-left-bag {
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #6bad0d;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+// lef-item
+.navbar-bot-b{
+  position: relative;
+}
+.navbar-botm-el {
+  position: absolute;
+  width: 278px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+.navbar-botm-item {
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 12px 20px;
+  color: #333 !important;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: #f9f9f9;
+    &::after {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    border-bottom: 1px dotted #d2d2d2;
+    z-index: 1;
+    display: block;
+    width: calc(100% - 30px);
+    width: -webkit-calc(100% - 30px);
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    svg {
+      font-size: 20px;
+    }
+  }
+}
+// bot item
+
+.navbar-botm-item-blok {
+  border: 1px solid #d2d2d2;
+  position: absolute;
+  transition: all 0.4s ease;
+  width: 610px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 30px;
+  gap: 60px;
+  height: 350px;
+  cursor: auto;
+  background-color: #fff;
+  right: -220%;
+  top: 20px;
+  background-repeat: no-repeat;
+  background-position: right;
+  opacity: 0;
+  display: none;
+  background-image: url("../../../assets/img/modImg.webp");
+}
+.navbar-botm-item-blok-list {
+  h2 {
+    transition: all 0.4s ease;
+    font-size: 130%;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #333333;
+    cursor: pointer;
+    &:hover {
+      color: #6bad0d;
+    }
+  }
+  li {
+    color: #333333;
+    padding: 5px 0;
+    line-height: 20px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #6bad0d;
+    }
+  }
+}
+.navbar-botm-item:hover {
+  .navbar-botm-item-blok {
+    z-index: 10;
+    top: 0;
+    opacity: 1;
+    display: flex;
+  }
+}
+// lEFT dATAS
+.left-datas {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: auto;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  top: 70px;
+  transition: all 0.3s ease;
+  z-index: -1;
+  opacity: 0;
+  padding: 20px 15px;
+  overflow-y: auto;
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+}
+.left-datas-block-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 13px 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover {
+    color: #6bad0d;
+  }
+}
+.left-datas-block-text {
+  font-size: 12px;
+  padding: 10px 0;
+  font-weight: 300;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  &:hover {
+    color: #6bad0d;
+  }
+}
+
+.nabar-left-item:hover {
+  .left-datas {
+    top: 54px;
+    z-index: 10;
+    opacity: 1;
+  }
+}
+.navbar-botm-item::after:hover{
+  .left-datas {
+    display: none;
+  }
+}
+.left-datas-slider{
+  width: 700px;
+}
+
+
+.left-datas-slider{
+  .slick-prev {
+    @include sliderArrow;
+  }
+  .slick-next {
+    @include sliderArrow;
+  }
+}
+

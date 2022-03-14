@@ -1,0 +1,39 @@
+@import '../../mixins.scss';
+.navbar{
+  min-height: 55px;
+  border-top: 1px solid #ececec;
+  position: relative
+}
+.navbar-list{
+  @include flexB;
+  
+}
+
+
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all .4s ease;
+    color: #333333;
+    font-size: 12px;
+    &:hover{
+      color: #6BAD0D;
+    }
+  }
+}
+@include respon (1076px){
+  .navbar-right{
+    display: none;
+  }
+}
+@include respon(998px){
+  .navbar{
+    display: none;
+  }
+}

@@ -30,15 +30,30 @@
   font-weight: 400;
   line-height: 24px;
   color: #000;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 @mixin hoverText {
-  &:hover{
+  &:hover {
     color: #6bad0d;
   }
 }
 @mixin respon($screen-md-min) {
   @media (max-width: #{$screen-md-min}) {
-      @content;
+    @content;
   }
+}
+@mixin sliderArrow {
+  transition: all 0.4s ease;
+  color: black;
+  &:hover {
+    color: #7ab526;
+  }
+}
+@mixin slierArrowRespon {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+  background-color: #fff;
 }
