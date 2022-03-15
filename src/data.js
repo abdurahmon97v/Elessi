@@ -1087,7 +1087,56 @@ const topSectionImgs = [
         title:'Trees',
     },
 ]
+const botmCards = [
+    {
+        img:imgs.botm1,
+        title:'Joobie Ice Cream',
+    },
+    {
+        img:imgs.botm2,
+        title:'Fresh Guava Juice',
+        
+    },
+    {
+        img:imgs.botm3,
+        title:'Fresh Vegetables',
+        
+    },
+]
+const partnores = [
+    {
+        img:imgs.part1,
+        id:1,
+    },
+    {
+        img:imgs.part2,
+        id:2,
+    },
+    {
+        img:imgs.part3,
+        id:3,
+    },
+    {
+        img:imgs.part4,
+        id:4,
+    },
+    {
+        img:imgs.part5,
+        id:5,
+    },
+    {
+        img:imgs.part6,
+        id:6,
+    },
+    {
+        img:imgs.part7,
+        id:6,
+    },
+
+]
 export {
+    partnores,
+    botmCards,
     demoData,
     data,
     iconData,

@@ -2,9 +2,9 @@ import React from 'react';
 import './SaleCard.scss';
 
 
-const SaleCrad = ({item}) => {
+const SaleCrad = ({item , botm}) => {
   return (
-    <li className='sale-card-miniblock'>
+    <li onClick={()=> console.log('efef')} className={botm ? 'sale-card-miniblock botm-el': 'sale-card-miniblock'}>
       <div className='sale-card-miniblock-img'>
         <img src={item.img} alt="img" />
       </div>

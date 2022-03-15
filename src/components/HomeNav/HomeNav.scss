@@ -1,0 +1,18 @@
+.home-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-flow: row wrap;
+}
+.home-nav__item{
+  cursor: pointer;
+  color: #aaa;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+.activeItem{
+  color: #fff;
+  background-color: #6bad0d;
+}

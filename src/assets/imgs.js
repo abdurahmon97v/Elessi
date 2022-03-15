@@ -88,11 +88,35 @@ import top5 from './img/top5.jpg';
 import top6 from './img/top6.webp';
 import top7 from './img/top7.webp';
 
+import botm1 from './img/botm1.jpg';
+import botm2 from './img/botm2.jpg';
+import botm3 from './img/botm3.webp';
+
+import part1 from './img/part1.jpg';
+import part2 from './img/part2.webp';
+import part3 from './img/part3.webp';
+import part4 from './img/part4.webp';
+import part5 from './img/part5.webp';
+import part6 from './img/part6.jpg';
+import part7 from './img/part7.webp';
 
 
 
 
 export default{
+  part1,
+  part2,
+  part3,
+  part4,
+  part5,
+  part6,
+  part7,
+
+
+  botm1,
+  botm2,
+  botm3,
+
   flag1,
   flag2,
   flag3,

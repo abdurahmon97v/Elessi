@@ -6,6 +6,21 @@
   display: flex;
   cursor: grab;
   gap: 20px;
+  z-index: -1;
+}
+.botm-el{
+  border: transparent;
+  z-index: 1;
+  cursor: auto;
+  .sale-card-miniblock-sale {
+    color: #000;
+  }
+  .sale-card-miniblock-title{
+    cursor: pointer;
+    &:hover{
+      color: #7AB526;
+    }
+  }
 }
 .sale-card-miniblock-img {
   max-width: 71px;

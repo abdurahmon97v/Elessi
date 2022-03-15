@@ -9,9 +9,15 @@ import SliderAll from "./SliderALL/SliderAll";
 import HomeSliderBotm from "./HomeSliderBotm/HomeSliderBotm";
 import SmallCard from "./Cards/SmallCard/SmallCard";
 import SaleCrad from "./Cards/SaleCard/SaleCrad";
+import HomeNav from "./HomeNav/HomeNav";
+import HomeBotmCard from "./Cards/HomeBotmCard/HomeBotmCard";
+import HomeRated from "./HomeRated/HomeRated";
 
 
 export {
+  HomeRated,
+  HomeBotmCard,
+  HomeNav,
   SaleCrad,
   SmallCard,
   Header,

@@ -73,11 +73,11 @@
   }
 }
 .product-card-wish {
-  left: -136px;
+  left: -109px;
   &::after {
     content: "";
     position: absolute;
-    left: 128px;
+    left: 103px;
     bottom: 8px;
     border: 6px solid transparent;
     border-top: 5px solid #383838;
@@ -85,11 +85,11 @@
   }
 }
 .product-card-quick {
-  left: -102px;
+  left: -83px;
   &::after {
     content: "";
     position: absolute;
-    left: 95px;
+    left: 77px;
     bottom: 8px;
     border: 6px solid transparent;
     border-top: 5px solid #383838;
@@ -97,12 +97,12 @@
   }
 }
 .product-card-compare {
-  left: -88px;
+  left: -73px;
 
   &::after {
     content: "";
     position: absolute;
-    left: 79px;
+    left: 67px;
     bottom: 8px;
     border: 6px solid transparent;
     border-top: 5px solid #383838;
