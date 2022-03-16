@@ -7,10 +7,15 @@ const saleProduct = () => {
 const sortRaiting = (item) => {
   const result = data.allProducts.filter((e)=> (e[item]));
   return result;
+};
+const sortName = (item) => {
+  const result = data.allProducts.filter((e)=>(e.name === item));
+  return result;
 }
 
 export {
   saleProduct,
   sortRaiting,
+  sortName
 }
 

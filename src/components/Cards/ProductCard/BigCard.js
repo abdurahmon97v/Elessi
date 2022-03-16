@@ -1,9 +1,9 @@
 import React from 'react';
 
-const BigCard = ({item}) => {
+const BigCard = ({item ,routePage}) => {
   return (
     <div className='sale-products'>
-      <h2 className='sale-product-title'>{item.name}</h2>
+      <h2 onClick={()=> routePage()} className='sale-product-title'>{item.name}</h2>
       <div className='sale-product-prises'>
         <p className='sale-product-salecount'>$ {item.saleCount}</p>
         <p className='sale-product-price'>$ {item.price}</p>

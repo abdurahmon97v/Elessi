@@ -12,9 +12,11 @@ import SaleCrad from "./Cards/SaleCard/SaleCrad";
 import HomeNav from "./HomeNav/HomeNav";
 import HomeBotmCard from "./Cards/HomeBotmCard/HomeBotmCard";
 import HomeRated from "./HomeRated/HomeRated";
+import Register from './Register/Register';
 
 
 export {
+  Register,
   HomeRated,
   HomeBotmCard,
   HomeNav,

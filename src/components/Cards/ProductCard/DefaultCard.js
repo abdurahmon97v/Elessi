@@ -1,10 +1,10 @@
 import React from 'react';
 
-const DefaultCard = ({ item }) => {
+const DefaultCard = ({ item , routePage }) => {
   return (
     <div className='product-card-name'>
       <h3>
-        <span>{item.name}</span>
+        <span onClick={()=> routePage()}>{item.name}</span>
       </h3>
       <p className='product-card-prises'>
         <span className='product-card-prise'>$ {item.price}</span>

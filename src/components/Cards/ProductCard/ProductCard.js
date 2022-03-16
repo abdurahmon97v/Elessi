@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom';
 import { AiOutlineHeart, AiOutlineEye } from 'react-icons/ai';
 import { TiArrowSyncOutline } from 'react-icons/ti';
 import DefaultCard from './DefaultCard';
+import { useNavigate } from 'react-router-dom';
 import BigCard from './BigCard';
 
 const ProductCard = ({ item, sales }) => {
+  const navigate = useNavigate();
+  const routePage = () => {
+    navigate(`info/${item.name}`);
+  }
 
   return (
-
     <div className='product-card'>
       <div className={sales ? `product-card-all products-sale` : `product-card-all`}>
-        <div className='product-card-img-block'>
+        <div onClick={routePage} className='product-card-img-block'>
           {item.sale ? <span className='product-card-sale'>{item.salePercent}%</span> : ''}
           <img className='product-card-img1' src={item.img} alt="img" />
           <img className='product-card-img2' src={item.img2} alt="img" />
@@ -44,9 +48,9 @@ const ProductCard = ({ item, sales }) => {
           </ul>
         </div>
         {sales ?
-          <BigCard item={item} />
+          <BigCard routePage={routePage} item={item} />
           :
-          <DefaultCard item={item} />
+          <DefaultCard routePage={routePage} item={item} />
         }
       </div>
     </div>

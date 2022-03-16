@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, Layaut, Wishlist } from "./pages";
+import { Home, InfoProduct, Layaut, Wishlist } from "./pages";
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Route path="/" element={<Layaut />}>
         <Route index element={<Home />} />
         <Route path="wishlist" element={<Wishlist />}/>
+        <Route path="info/:id" element={<InfoProduct />}/>
       </Route>
     </Routes>
   );

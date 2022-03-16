@@ -1,12 +1,17 @@
 .sale-card-miniblock {
   padding: 10px;
-  border: 1px solid #a7a7a7;
+  border: 1px solid #6BAD0D;
   position: relative;
   border-radius: 5px;
   display: flex;
   cursor: grab;
   gap: 20px;
-  z-index: -1;
+  .sale-card-miniblock-title{
+    cursor: pointer;
+    &:hover{
+      color: #7AB526;
+    }
+  }
 }
 .botm-el{
   border: transparent;

@@ -14,7 +14,7 @@ const homeSlice = createSlice({
     },
     getProduct: (state, action) => {
       state.productName = action.payload.nam;
-    }
+    },
   }
 
 });

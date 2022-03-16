@@ -1,0 +1,58 @@
+@import '../../mixins.scss';
+.footer {
+  background-color: #fafafa;
+  border-top: 1px solid #ececec;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.block {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1.3fr 1fr 1.5fr 1.2fr;
+}
+.logo {
+  display: block;
+  margin-bottom: 15px;
+  color: #555555;
+}
+.items {
+  h2{
+    color: #333333;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+.text {
+  margin-bottom: 1.3em;
+  line-height: 24px;
+  color: #333;
+}
+.list_logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.icons {
+  color: #555555;
+  font-size: 17px;
+}
+.usefull_list{
+  li{
+    margin-bottom: 5px;
+    line-height: 30px;
+  }
+  a{
+    color: #555555;
+  }
+}
+@include respon(827px){
+  .block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@include respon(555px){
+  .block {
+    grid-template-columns: 1fr;
+  }
+}
