@@ -1,0 +1,83 @@
+@import '../../mixins.scss';
+.content {
+  .title {
+    font-size: 26px;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+}
+.prises {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.saleCount {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 25px;
+  text-decoration: line-through;
+}
+.curentPrice {
+  font-weight: 400;
+  font-size: 25px;
+}
+.texts {
+  color: #555;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.buy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.buyCount {
+  display: flex;
+  align-items: center;
+  input {
+    width: 30px;
+    height: 38px;
+    background: 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  button {
+    border: 1px solid #ccc;
+    width: 25px;
+    height: 40px;
+    line-height: 40px;
+    background: 0 0;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+}
+.buyButton {
+  text-transform: uppercase;
+  border-color: #6bad0d;
+  background-color: #6bad0d;
+  border: none;
+  cursor: pointer;
+  padding: 13px;
+  min-width: 226px;
+  max-width: 100%;
+  color: #fff;
+}
+
+.logos{
+  position: relative;
+  img{
+    position: absolute;
+    left: -16px;
+  }
+}
+@include respon(850px){
+  .content{
+    margin-bottom: 50px;
+  }
+}

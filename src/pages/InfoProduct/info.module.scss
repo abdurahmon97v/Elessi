@@ -1,9 +1,43 @@
-.info{
+@import "../../mixins.scss";
+.info {
   padding-top: 40px;
   padding-bottom: 40px;
+  .slick-prev {
+    @include sliderArrow;
+  }
+  .slick-next {
+    @include sliderArrow;
+  }
+  @include respon(1264px) {
+    //
+    .slick-prev {
+      @include slierArrowRespon;
+    }
+    .slick-next {
+      @include slierArrowRespon;
+    }
+  }
 }
-.block{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.block {
+  display: flex;
   gap: 30px;
+}
+.gallery {
+  width: 50%;
+  img {
+    width: 100%;
+  }
+}
+.top {
+  background-color: #f7f7f7;
+  padding: 20px 0;
+  text-align: center;
+}
+@include respon(850px){
+  .block {
+    flex-direction: column;
+  }
+  .gallery {
+    width: 100%;
+  }
 }

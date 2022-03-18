@@ -1,12 +1,17 @@
 import React from 'react';
 import './BackDroup.scss';
 import { useDispatch } from 'react-redux';
-import { chengeModal } from '../../store/homeSlice';
+import { chengeFalsey,chengeTrusy } from '../../store/homeSlice';
+
 
 const BackDroup = () => {
-  const dispatch = useDispatch((state)=> state.overmodal)
+  const dispatch = useDispatch()
   const closeModal = () => {
-    dispatch(chengeModal(false))
+    dispatch(chengeFalsey({mod:'overmodal'}));
+    dispatch(chengeTrusy({mod:'loginModal'}));
+    dispatch(chengeFalsey({mod:'openCard'}));
+    // dispatch(openModalChange(false));openCard
+    document.body.style.overflow = "auto";
   }
   return <div onClick={closeModal} className='back-doup'/>
 };

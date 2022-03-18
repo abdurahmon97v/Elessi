@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import homeSlice from './homeSlice';
+import homeReduse from './homeSlice';
+import userClice from './userClice';
 
 const store = configureStore({
   reducer:{
-    home:homeSlice,
+    home:homeReduse,
+    user:userClice,
   }
 });
 

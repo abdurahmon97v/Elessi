@@ -13,9 +13,15 @@ import HomeNav from "./HomeNav/HomeNav";
 import HomeBotmCard from "./Cards/HomeBotmCard/HomeBotmCard";
 import HomeRated from "./HomeRated/HomeRated";
 import Register from './Register/Register';
+import InfoContent from "./InfoContent/InfoContent";
+import Login from "./Login/Login";
+import CardProducts from "./CardProducts/CardProducts";
 
 
 export {
+  CardProducts,
+  Login,
+  InfoContent,
   Register,
   HomeRated,
   HomeBotmCard,

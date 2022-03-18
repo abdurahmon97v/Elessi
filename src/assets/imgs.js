@@ -100,10 +100,13 @@ import part5 from './img/part5.webp';
 import part6 from './img/part6.jpg';
 import part7 from './img/part7.webp';
 
+import logos from './img/logos.png';
+
 
 
 
 export default{
+  logos,
   part1,
   part2,
   part3,

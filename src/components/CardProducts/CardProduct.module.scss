@@ -1,0 +1,40 @@
+.product {
+  padding: 20px;
+}
+.productImg {
+  width: 120px;
+  display: block;
+  margin-right: 20px;
+}
+.allProducts{
+  display: flex;
+}
+.productPrice{
+  gap: 20px;
+  p{
+    margin-bottom: 5px;
+  }
+}
+.counts{
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 8px;
+  }
+  span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+  }
+}

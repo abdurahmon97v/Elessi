@@ -8,20 +8,25 @@ import { BsBag ,BsSearch} from 'react-icons/bs';
 import OverModal from '../../OverModal/OverModal';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { chengeModal } from '../../../store/homeSlice';
+import { chengeModal ,chengeTrusy} from '../../../store/homeSlice';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import Login from './../../Login/Login';
 
 
 const HeaderBootm = () => {
   const { overmodal } = useSelector((state) => state.home);
   const dispatch = useDispatch();
   const chengeMdal = () => {
-    dispatch(chengeModal(true))
+
+    dispatch(chengeTrusy({mod:'overmodal'}));
+    document.body.style.overflow = "hidden";
   }
   return (
     <div className='container'>
 
-      {overmodal ? <OverModal cl='right' /> : ''}
+      {overmodal ? <OverModal cl='right'>
+        <Login />
+      </OverModal> : ''}
 
       <div className='HeaderBootm'>
         <button className='header-botm-menu'>

@@ -3,6 +3,7 @@ import { Footer, Header } from '../../components';
 import { Outlet } from 'react-router-dom';
 
 const Layaut = () => {
+  console.log(window.scrollY);
   return (
     <>
       <div className='wrapper'>

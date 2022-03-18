@@ -1,25 +1,65 @@
 import React from 'react';
 import st from './info.module.scss';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { sortName } from '../../sortProduct';
+import { SliderAll, InfoContent, OverModal, Login, CardProducts } from '../../components';
+import { useSelector, useDispatch } from 'react-redux';
+import { chengeTrusy, chengeFalsey, productAdd } from '../../store/homeSlice';
+
 
 const InfoProduct = () => {
-  const param = useParams();
-  const result = sortName(param.id);
-  const [product] = result;
-  const { name, price, img, img2 } = product;
+  const { user, loginModal, products, openCard } = useSelector((e) => e.home);
+  const dispatch = useDispatch();
 
+  const param = useParams();
+
+  const result = sortName(param.id);
+
+  const [all] = result;
+
+  dispatch(productAdd(all))
+
+
+  const addCard = () => {
+
+    if (user) {
+      dispatch(chengeTrusy({ mod: 'openCard' }))
+    }
+    else {
+      dispatch(chengeFalsey({ mod: 'loginModal' }));
+      document.body.style.overflow = "hidden";
+    }
+
+
+  }
   return (
     <>
+      {loginModal ? '' : <OverModal cl={'right'}>
+        <Login />
+      </OverModal>}
+      {openCard ? <OverModal cl={'right'}>
+        <CardProducts />
+      </OverModal> : ''}
+      <div className={st.top}>
+        <Link to='/'>Home {' > ' + all.name}</Link>
+      </div>
       <section className={st.info}>
         <div className='container'>
           <div className={st.block}>
             <div className={st.gallery}>
-
+              <SliderAll show={1} dots>
+                <img src={all.img} alt="img" />
+                <img src={all.img2} alt="img" />
+              </SliderAll>
             </div>
-            <div className={st.content}>
-
-            </div>
+            {products.map((e) => (
+              <InfoContent
+                key={e.id}
+                item={e}
+                addCard={addCard}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -1,12 +1,13 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
 .overmodal {
-  width: 100%;
+  width: inherit;
   background-color: #fff;
   height: 100vh;
   z-index: 50;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
 }
 .header-botm-icon {
   &:hover {
