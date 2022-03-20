@@ -16,9 +16,11 @@ import Register from './Register/Register';
 import InfoContent from "./InfoContent/InfoContent";
 import Login from "./Login/Login";
 import CardProducts from "./CardProducts/CardProducts";
+import Search from "./Search/Search";
 
 
 export {
+  Search,
   CardProducts,
   Login,
   InfoContent,

@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom';
 import imgs from '../../../assets/imgs';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { BsBag ,BsSearch} from 'react-icons/bs';
+import { BsBag, BsSearch } from 'react-icons/bs';
 import OverModal from '../../OverModal/OverModal';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { chengeModal ,chengeTrusy} from '../../../store/homeSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { chengeTrusy } from '../../../store/homeSlice';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import Login from './../../Login/Login';
+import Search from '../../Search/Search';
 
 
 const HeaderBootm = () => {
   const { overmodal } = useSelector((state) => state.home);
   const dispatch = useDispatch();
+  const [inputVal,setInputVal] = React.useState('');
   const chengeMdal = () => {
-
-    dispatch(chengeTrusy({mod:'overmodal'}));
+    dispatch(chengeTrusy({ mod: 'overmodal' }));
     document.body.style.overflow = "hidden";
   }
   return (
@@ -37,9 +37,11 @@ const HeaderBootm = () => {
         </Link>
         <form className='header-botm-form'>
           <label>
-            <input type="text" placeholder='I’m shopping for....' />
+            <input type="text" onChange={(e)=> setInputVal(e.target.value)} 
+            value={inputVal} placeholder='I’m shopping for....' />
           </label>
           <button>SEARCH</button>
+          {inputVal ? <Search setInputVal={setInputVal} search={inputVal}/> : ''}
         </form>
         <ul className='header-top-buttons'>
           <li className='header-top-search-icon' onClick={chengeMdal}>

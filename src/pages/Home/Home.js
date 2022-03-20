@@ -1,17 +1,17 @@
 import React from 'react';
-import { HomeBotmCard, HomeNav, HomeRated, HomeSlider, HomeSliderBotm, ProductCard, SaleCrad, SmallCard } from '../../components';
+import { HomeBotmCard, HomeNav, Login, OverModal, CardProducts, HomeRated, HomeSlider, HomeSliderBotm, ProductCard, SaleCrad, SmallCard } from '../../components';
 import { homeSlider } from '../../data';
 import { SliderAll } from '../../components';
 import { homeSliderBotm } from '../../data';
 import { topSectionImgs } from '../../data';
 import { saleProduct } from '../../sortProduct';
-import { data, botmCards, partnores} from '../../data';
+import { data, botmCards, partnores } from '../../data';
 import { useSelector } from 'react-redux';
 import './Home.scss';
 
 
 const Home = () => {
-  const { productName } = useSelector((item) => item.home);
+  const { productName, openCard, loginModal } = useSelector((item) => item.home);
   // 1018
   // 1024
   // 754
@@ -70,6 +70,12 @@ const Home = () => {
 
   return (
     <>
+      {loginModal ? '' : <OverModal cl={'right'}>
+        <Login />
+      </OverModal>}
+      {openCard ? <OverModal cl={'right'}>
+        <CardProducts />
+      </OverModal> : ''}
       <section className='home-sliders'>
         <SliderAll res={responSlider} dots show={1}>
           {homeSlider.map((e) => (
@@ -143,11 +149,11 @@ const Home = () => {
       <section className='partnores'>
         <div className='container'>
           <SliderAll res={partnoerRespon} show={6}>
-             {partnores.map((e)=>(
-                <a key={e.id} className='home-partnores' href="#">
-                  <img src={e.img} alt="partnores" />
-                </a>
-             ))}
+            {partnores.map((e) => (
+              <a key={e.id} className='home-partnores' href="#">
+                <img src={e.img} alt="partnores" />
+              </a>
+            ))}
           </SliderAll>
         </div>
       </section>

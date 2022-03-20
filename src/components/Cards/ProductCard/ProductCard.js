@@ -7,6 +7,7 @@ import DefaultCard from './DefaultCard';
 import { useNavigate } from 'react-router-dom';
 import BigCard from './BigCard';
 
+
 const ProductCard = ({ item, sales }) => {
   const navigate = useNavigate();
   const routePage = () => {
@@ -20,9 +21,9 @@ const ProductCard = ({ item, sales }) => {
           {item.sale ? <span className='product-card-sale'>{item.salePercent}%</span> : ''}
           <img className='product-card-img1' src={item.img} alt="img" />
           <img className='product-card-img2' src={item.img2} alt="img" />
-          <ul className='product-card-list'>
+          <ul onClick={(e)=> e.stopPropagation()} className='product-card-list'>
             <li>
-              <Link to='wishlist'>
+              <Link to={`wishlist/${item.name}`}>
                 <AiOutlineHeart />
                 <span className='product-card-wish'>
                   Add to Wishlist

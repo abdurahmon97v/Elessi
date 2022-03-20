@@ -27,3 +27,13 @@
   width: 30%;
   height: 100vh;
 }
+@include respon(914px){
+  .overmodal-in{
+    width: 50%;
+  }
+}
+@include respon(550px){
+  .overmodal-in{
+    width: 100%;
+  }
+}
